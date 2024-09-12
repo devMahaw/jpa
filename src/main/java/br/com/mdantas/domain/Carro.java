@@ -12,12 +12,6 @@ public class Carro {
     @SequenceGenerator(name = "carro_seq", sequenceName = "seq_carro", initialValue = 1, allocationSize = 1)
     private Long id;
 
-    @Column(name = "MODELO", length = 50, nullable = false)
-    private String modelo;
-
-    @Column(name = "ANO", nullable = false)
-    private int ano;
-
     @ManyToOne
     @JoinColumn(name = "marca_id", nullable = false)
     private Marca marca;
