@@ -18,6 +18,9 @@ public class Carro {
     @Column(name = "ANO", nullable = false)
     private int ano;
 
+    @ManyToOne
+    @JoinColumn(name = "marca_id", nullable = false)
+    private Marca marca;
 
     @ManyToMany
     @JoinTable(name = "TB_CARRO_ACESSORIO",
