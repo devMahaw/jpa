@@ -20,6 +20,12 @@ public class Aluno {
     @Column(name = "CODIGO", length = 10, nullable = false, unique = true)
     private String codigo;
 
+    @Column(name = "NOME", length = 10, nullable = false)
+    private String nome;
+
+    @OneToOne(mappedBy = "aluno")
+    private Matricula matricula;
+
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
             name = "TB_ALUNO_COMPUTADOR",
