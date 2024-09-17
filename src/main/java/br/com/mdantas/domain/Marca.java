@@ -16,6 +16,12 @@ public class Marca {
     @SequenceGenerator(name = "marca_seq", sequenceName = "seq_marca", initialValue = 1, allocationSize = 1)
     private Long id;
 
+    @Column(name = "NOME", length = 50, nullable = false)
+    private String nome;
+
+    @OneToMany(mappedBy = "marca")
+    private List<Carro> carros;
+
     public Long getId() {
         return id;
     }
