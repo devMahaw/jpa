@@ -18,12 +18,6 @@ public class Produto {
     @Column(name = "CODIGO", length = 10, nullable = false, unique = true)
     private String codigo;
 
-    @Column(name = "NOME", length = 50, nullable = false)
-    private String nome;
-
-    @Column(name = "DESCRICAO", length = 100, nullable = false)
-    private String descricao;
-
     public Long getId() {
         return id;
     }
