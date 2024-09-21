@@ -12,6 +12,12 @@ public class Acessorio {
     @SequenceGenerator(name = "acessorio_seq", sequenceName = "seq_acessorio", initialValue = 1, allocationSize = 1)
     private Long id;
 
+    @Column(name = "DESCRICAO", length = 100, nullable = false)
+    private String descricao;
+
+    @ManyToMany(mappedBy = "acessorios")
+    private List<Carro> carros;
+
     public Long getId() {
         return id;
     }
